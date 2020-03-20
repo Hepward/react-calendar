@@ -2,6 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
+const plMonths = [
+  "Styczeń",
+  "Luty",
+  "Marzec",
+  "Kwiecień",
+  "Maj",
+  "Czerwiec",
+  "Lipiec",
+  "Sierpień",
+  "Wrzesień",
+  "Październik",
+  "Listopad",
+  "Grudzień"
+];
+
 const headerMonth = props => (
   <header className="month-header">
     <div className="row">
@@ -10,7 +25,7 @@ const headerMonth = props => (
       </Link>
     </div>
     <div className="row">
-      <h1>{props.curMonth.name}</h1>
+      <h1>{plMonths[props.curMonth.monthNumber]}</h1>
     </div>
     <div className="row">
       <Link to={"/" + props.nextMonth.slug}>

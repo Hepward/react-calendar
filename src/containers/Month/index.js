@@ -38,6 +38,7 @@ export default class Month extends React.Component {
       {
         curMonth: {
           date: curMonth,
+          monthNumber: moment(curMonth).month(),
           name: moment(curMonth).format("MMMM YYYY"),
           days: moment(curMonth).daysInMonth(),
           editDay: null
